@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: false,
 
-  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js'],
+  pageExtensions: ['page.tsx', 'page.ts', 'page.jsx', 'page.js', 'tsx', 'ts'],
   webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
@@ -35,6 +35,8 @@ const nextConfig = {
   },
   basePath: process.env.NODE_ENV === 'production' ? '/tagtalk' : undefined, // update if your repo name changes for 'npm run deploy' to work successfully
   assetPrefix: process.env.NODE_ENV === 'production' ? '/tagtalk/' : undefined, // update if your repo name changes for 'npm run deploy' to work successfully
+  //enable experimental app directory
+  experimental: { appDir: true },
 };
 
 module.exports = nextConfig
