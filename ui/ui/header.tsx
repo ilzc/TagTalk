@@ -1,3 +1,5 @@
+"use client";
+
 import { Fragment } from "react";
 // import { Menu, Transition } from "@headlessui/react";
 // import { ChevronDownIcon } from "@heroicons/react/20/solid";
@@ -8,11 +10,12 @@ import { Avatar, Dropdown, Layout, Menu, MenuProps, theme } from 'antd';
 import { LoadingOutlined } from '@ant-design/icons';
 import { Spin } from 'antd';
 import Link from "next/link";
+import React from "react";
 
 const antIcon = <LoadingOutlined style={{ fontSize: 24 }} spin />;
 
 
-export function Header({isReady, publicKey}) {
+export function GlobalNav({isReady, publicKey}) {
 
 
   if (isReady) {
